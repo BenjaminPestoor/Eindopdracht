@@ -1,0 +1,13 @@
+Hoofdserver
+----------------
+- Centrale logservice
+- Monitoring service  (cacti)
+- Saltstack master
+- Docker en Kubernetes master. (?)
+
+
+Realiseer twee servers die dienst doen als Docker worker voor Kubernetes. De servers moeten ingericht worden via Saltstack. Bij het 
+opstarten van de VM mag je een script meegeven zodat Saltstack minion services wordt geïnstalleerd. De VM’s moet hun system log naar de log servers sturen en gemonitord wordt door de monitor service.
+
+Op de Docker containers moet d.m.v. Saltstack een Wordpress installatie opgezet worden.
+
