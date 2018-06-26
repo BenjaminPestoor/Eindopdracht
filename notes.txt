@@ -1,6 +1,6 @@
 Hoofdserver
 ----------------
-- Centrale logservice
+- Centrale logservice (rsyslog)
 - Monitoring service  (cacti)
 - Saltstack master
 - Docker en Kubernetes master. (?)
