@@ -11,3 +11,16 @@ opstarten van de VM mag je een script meegeven zodat Saltstack minion services w
 
 Op de Docker containers moet d.m.v. Saltstack een Wordpress installatie opgezet worden.
 
+==================================================================================================================
+
+salt log files location
+----------------------------------------
+log_file: /var/log/salt/master
+log_file: /var/log/salt/minion
+
+log_level: warning (default)
+
+===========================
+Docker
+===========================
+/etc/salt/minion -> Docker Configuration
