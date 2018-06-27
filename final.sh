@@ -28,9 +28,8 @@ apt-get -y install snmpd
 apt-get -y install snmp-mibs-downloader
 apt-get -y install rrdtool
 apt-get -y install mysql-server
-apt-get -y install mysql-server
 
-# Creating a database for installing cacti (??)
+# Creating a database for installing cacti (unsure)
 mysql -u root -p admin
 create database cacti;
 grant all on cacti.* to 'cactiuser'@'localhost' identified by 'password1'
