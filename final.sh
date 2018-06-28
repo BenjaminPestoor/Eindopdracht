@@ -10,6 +10,12 @@ sudo apt-get upgrade
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
 sudo sh install_salt.sh -M
 
+
+sleep 5
+service salt-master restart
+sleep 10
+
+
 # Config file:
 ......
 
@@ -18,11 +24,8 @@ sudo sh install_salt.sh -M
 # Installing Monitor Service (cacti)
 #==========================================
 # Install Prerequisites 
-apt-get -y install php
+apt-get -y install php*
 apt-get -y install apache2
-apt-get -y install php-mysql
-apt-get -y install php-snmp
-apt-get -y install php-xml
 apt-get -y install snmp
 apt-get -y install snmpd
 apt-get -y install snmp-mibs-downloader
