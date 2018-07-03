@@ -7,20 +7,19 @@ sudo apt-get upgrade
 #===================================
 # Installing Salt-Master (+minion)
 #===================================
-curl -L https://bootstrap.saltstack.com -o install_salt.sh
-sudo sh install_salt.sh -M
+#curl -L https://bootstrap.saltstack.com -o install_salt.sh
+#sudo sh install_salt.sh -M
 
-
-sleep 5
-service salt-master restart
-sleep 10
+#sleep 5
+#service salt-master restart
+#sleep 10
 
 # Accept keys
-salt-key -A
+#salt-key -A
 
 # Config file: (necessary??)
-......
-
+#......
+# .....
 
 #==========================================
 # Installing Monitor Service (cacti)
@@ -41,17 +40,18 @@ create database cacti;
 grant all on cacti.* to 'cactiuser'@'localhost' identified by 'password1'
 flush privilages;
 exit
+
 # Open Config file
-nano /etc/mysql/mysql.conf.d/mysqld.cnf
+#nano /etc/mysql/mysql.conf.d/mysqld.cnf
 # Add the following lines to the end of file:
-max_heap_table_size		= 98M
-tmp_table_size			= 64M
-join_buffer_size		= 64M
-innodb_buffer_pool_size	= 485M
-innodb_doublewrite		= off
-innodb_flush_log_at_timeout	= 3
-innodb_read_io_threads	= 32
-innodb_write_io_threads	= 16
+#max_heap_table_size		= 98M
+#tmp_table_size			= 64M
+#join_buffer_size		= 64M
+#innodb_buffer_pool_size	= 485M
+#innodb_doublewrite		= off
+#innodb_flush_log_at_timeout	= 3
+#innodb_read_io_threads	= 32
+#innodb_write_io_threads	= 16
 
 service mysql restart
 service apache2 restart
@@ -80,8 +80,9 @@ tar -xvzf settings.tgz
 
 
 # Log file locations:
-log_file: /var/log/salt/master
-log_file: /var/log/salt/minion
+#---------------------
+# /var/log/salt/master
+# /var/log/salt/minion
 
 
 
@@ -89,4 +90,5 @@ log_file: /var/log/salt/minion
 # Installing Docker
 #=======================================
 
-
+echo "========= Installation Complete ==========="
+echo "============ End of script ================"
