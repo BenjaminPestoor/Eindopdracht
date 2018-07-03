@@ -15,8 +15,10 @@ sleep 5
 service salt-master restart
 sleep 10
 
+# Accept keys
+salt-key -A
 
-# Config file:
+# Config file: (necessary??)
 ......
 
 
@@ -25,6 +27,7 @@ sleep 10
 #==========================================
 # Install Prerequisites 
 apt-get -y install php*
+apt-get -y install php-*
 apt-get -y install apache2
 apt-get -y install snmp
 apt-get -y install snmpd
