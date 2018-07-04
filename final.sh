@@ -58,6 +58,7 @@ service mysql restart
 service apache2 restart
 
 # install cacti 1.1.18
+cd /home/andres
 wget https://www.cacti.net/downloads/cacti-1.1.18.tar.gz
 tar -xvzf cacti-1.1.18.tar.gz
 
@@ -80,7 +81,7 @@ mv plugin:settings-v0.71-1.tgz settings.tgz
 tar -xvzf settings.tgz
 
 
-cd /home/andres/
+cd /home/andres
 
 # Log file locations:
 #---------------------
