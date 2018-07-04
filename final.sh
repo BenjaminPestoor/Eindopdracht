@@ -10,9 +10,9 @@ sudo apt-get upgrade
 #curl -L https://bootstrap.saltstack.com -o install_salt.sh
 #sudo sh install_salt.sh -M
 
-#sleep 2
+#sleep 1
 #service salt-master restart
-#sleep 2
+#sleep 1
 
 # Accept keys
 #salt-key -A
@@ -34,6 +34,9 @@ apt-get -y install snmp-mibs-downloader
 apt-get -y install rrdtool
 apt-get -y install mysql-server
 apt-get -y install unzip
+apt-get -y phpmyadmin
+echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf
+
 
 # Creating a database for cacti
 mysql -u root -p
@@ -65,7 +68,7 @@ tar -xvzf cacti-1.1.18.tar.gz
 service snmpd restart
 service mysql restart
 service apache2 restart
-sleep 3
+sleep 2
 #===================================
 # Configure Central logservice
 #===================================
@@ -93,6 +96,6 @@ cd /home/andres
 #=======================================
 # Installing Docker
 #=======================================
-
+echo "==========================================="
 echo "========= Installation Complete ==========="
 echo "============ End of script ================"
