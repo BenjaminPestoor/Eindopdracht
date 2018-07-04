@@ -27,6 +27,7 @@ mkdir -p /usr/share/cacti/site/plugins/
 # Install Prerequisites 
 apt-get -y install php*
 apt-get -y install php-*
+apt-get -y install php libapache2-mod-php php-mcrypt php-mysql
 apt-get -y install apache2
 apt-get -y install snmp
 apt-get -y install snmpd
@@ -40,19 +41,6 @@ echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf
 
 # Creating a database for cacti
 mysql --user="root" --password="admin" -e "CREATE DATABASE cacti"
-
-
-# Configuring MYSQL config file
-#nano /etc/mysql/mysql.conf.d/mysqld.cnf
-# Add the following lines to the end of file:
-#max_heap_table_size		= 98M
-#tmp_table_size			= 64M
-#join_buffer_size		= 64M
-#innodb_buffer_pool_size	= 485M
-#innodb_doublewrite		= off
-#innodb_flush_log_at_timeout	= 3
-#innodb_read_io_threads	= 32
-#innodb_write_io_threads	= 16
 
 service mysql restart
 service apache2 restart
