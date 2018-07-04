@@ -17,13 +17,13 @@ sudo apt-get upgrade
 # Accept keys
 #salt-key -A
 
-# Config file: (necessary??)
-#......
-# .....
 
 #==========================================
 # Installing Monitor Service (cacti)
 #==========================================
+# Create necessary directories
+mkdir /usr/share/cacti/site/plugins/
+
 # Install Prerequisites 
 apt-get -y install php*
 apt-get -y install php-*
@@ -79,6 +79,8 @@ wget https://docs.cacti.net/_media/plugin:settings-v0.71-1.tgz
 mv settings-v0.71-1.tgz settings.tgz
 tar -xvzf settings.tgz
 
+
+cd /home/andres
 
 # Log file locations:
 #---------------------
