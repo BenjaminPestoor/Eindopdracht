@@ -71,12 +71,12 @@ service apache2 restart
 cd /usr/share/cacti/site/plugins/
 
 wget https://docs.cacti.net/_media/plugin:syslog-v1.22-2.tgz
-mv syslog-v1.22-2.tgz syslog.tgz
+mv plugin:syslog-v1.22-2.tgz syslog.tgz
 tar -xvzf syslog.tgz
 
 cd /usr/share/cacti/site/plugins/
 wget https://docs.cacti.net/_media/plugin:settings-v0.71-1.tgz
-mv settings-v0.71-1.tgz settings.tgz
+mv plugin:settings-v0.71-1.tgz settings.tgz
 tar -xvzf settings.tgz
 
 
