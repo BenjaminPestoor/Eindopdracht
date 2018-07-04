@@ -36,11 +36,11 @@ apt-get -y install mysql-server
 apt-get -y install unzip
 
 # Creating a database for installing cacti (unsure)
-mysql -u root -p admin
-create database cacti;
-grant all on cacti.* to 'cactiuser'@'localhost' identified by 'password1'
-flush privilages;
-exit
+#mysql -u root -p admin
+#create database cacti;
+#grant all on cacti.* to 'cactiuser'@'localhost' identified by 'password1'
+#flush privilages;
+#exit
 
 # Open Config file
 #nano /etc/mysql/mysql.conf.d/mysqld.cnf
