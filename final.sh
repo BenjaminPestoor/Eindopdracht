@@ -22,7 +22,7 @@ sudo apt-get upgrade
 # Installing Monitor Service (cacti)
 #==========================================
 # Create necessary directories
-mkdir /usr/share/cacti/site/plugins/
+mkdir -p /usr/share/cacti/site/plugins/
 
 # Install Prerequisites 
 apt-get -y install php*
