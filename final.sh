@@ -7,15 +7,15 @@ sudo apt-get upgrade
 #===================================
 # Installing Salt-Master (+minion)
 #===================================
-curl -L https://bootstrap.saltstack.com -o install_salt.sh
-sudo sh install_salt.sh -M
+#curl -L https://bootstrap.saltstack.com -o install_salt.sh
+#sudo sh install_salt.sh -M
 
-sleep 5
-service salt-master restart
-sleep 10
+#sleep 2
+#service salt-master restart
+#sleep 2
 
 # Accept keys
-salt-key -A
+#salt-key -A
 
 # Config file: (necessary??)
 #......
