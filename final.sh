@@ -80,7 +80,7 @@ mv plugin:settings-v0.71-1.tgz settings.tgz
 tar -xvzf settings.tgz
 
 
-cd /home/andres
+cd /home/andres/
 
 # Log file locations:
 #---------------------
