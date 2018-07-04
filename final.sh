@@ -39,7 +39,7 @@ echo "Include /etc/phpmyadmin/apache.conf" >> /etc/apache2/apache2.conf
 
 
 # Creating a database for cacti
-mysql -u root -p admin
+mysql -u root --pasword admin
 create database cacti;
 grant all on cacti.* to 'cactiuser'@'localhost' identified by 'admin'
 flush privilages;
