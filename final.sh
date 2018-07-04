@@ -61,6 +61,7 @@ service apache2 restart
 cd /home/andres
 wget https://www.cacti.net/downloads/cacti-1.1.18.tar.gz
 tar -xvzf cacti-1.1.18.tar.gz
+mv cacti-1.1.18 /var/www/html/cacti
 
 service snmpd restart
 service mysql restart
