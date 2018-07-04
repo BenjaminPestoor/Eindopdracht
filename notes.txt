@@ -18,8 +18,6 @@ salt log files location
 log_file: /var/log/salt/master
 log_file: /var/log/salt/minion
 
-log_level: warning (default)
-
 ===========================
 Docker
 ===========================

@@ -35,14 +35,14 @@ apt-get -y install rrdtool
 apt-get -y install mysql-server
 apt-get -y install unzip
 
-# Creating a database for installing cacti (unsure)
-#mysql -u root -p admin
-#create database cacti;
-#grant all on cacti.* to 'cactiuser'@'localhost' identified by 'password1'
-#flush privilages;
-#exit
+# Creating a database for cacti
+mysql -u root -p
+create database cacti;
+grant all on cacti.* to 'cactiuser'@'localhost' identified by 'admin'
+flush privilages;
+exit
 
-# Open Config file
+# Configuring MYSQL config file
 #nano /etc/mysql/mysql.conf.d/mysqld.cnf
 # Add the following lines to the end of file:
 #max_heap_table_size		= 98M
@@ -64,7 +64,7 @@ tar -xvzf cacti-1.1.18.tar.gz
 service snmpd restart
 service mysql restart
 service apache2 restart
-
+sleep 3
 #===================================
 # Configure Central logservice
 #===================================
